@@ -11,6 +11,7 @@
   "dependencies": {
     "@next/font": "13.1.6",
     "@rainbow-me/rainbowkit": "^0.11.0",
+    "@skalenetwork/metaport": "^1.0.0-develop.10",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "ethers": "^5.7.2",
