@@ -72,6 +72,7 @@ export default function Home() {
   }, [metaport]);
 
   const handleTranserToCalypso = () => {
+    metaport.reset();
     metaport.transfer({
       amount: "0.001",
       chains: ["staging-legal-crazy-castor", "staging-utter-unripe-menkar"],
@@ -82,6 +83,7 @@ export default function Home() {
   };
 
   const handleTranserToEuropa = () => {
+    metaport.reset();
     metaport.transfer({
       amount: "0.001",
       chains: ["mainnet", "staging-legal-crazy-castor"],
