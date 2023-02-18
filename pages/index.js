@@ -91,7 +91,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <ConnectButton />
-        <button onClick={handleTranser}>Transfer to Calypso</button>
+        {metaport && (
+          <button onClick={handleTranser}>Transfer to Calypso</button>
+        )}
         <div id="metaport"></div>
       </main>
     </>
