@@ -68,7 +68,7 @@ const ethereum = {
       http: [
         isProduction
           ? 'https://eth.llamarpc.com'
-          : 'https://goerli.infura.io/v3/<infura-key>',
+          : 'https://goerli.blockpi.network/v1/rpc/public',
       ],
     },
   },
