@@ -71,6 +71,16 @@ export default function Home() {
     }
   }, [metaport]);
 
+  const handleTranser = () => {
+    metaport.transfer({
+      amount: '1000000000000',
+      chains: ['staging-legal-crazy-castor', 'staging-utter-unripe-menkar'],
+      tokenType: 'erc20',
+      lockValue: false,
+      tokenKeyname: '_ETHC_0xa270484784f043e159f74C03B691F80B6F6e3c24',
+    });
+  };
+
   return (
     <>
       <Head>
@@ -81,6 +91,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <ConnectButton />
+        <button onClick={handleTranser}>Transfer to Calypso</button>
         <div id="metaport"></div>
       </main>
     </>
