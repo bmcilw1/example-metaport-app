@@ -71,13 +71,23 @@ export default function Home() {
     }
   }, [metaport]);
 
-  const handleTranser = () => {
+  const handleTranserToCalypso = () => {
     metaport.transfer({
       amount: "1000000000000",
       chains: ["staging-legal-crazy-castor", "staging-utter-unripe-menkar"],
       tokenType: "erc20",
       lockValue: false,
       tokenKeyname: "_ETHC_0xa270484784f043e159f74C03B691F80B6F6e3c24",
+    });
+  };
+
+  const handleTranserToEuropa = () => {
+    metaport.transfer({
+      amount: "1000000000000",
+      chains: ["mainnet", "staging-legal-crazy-castor"],
+      tokenType: "eth",
+      lockValue: false,
+      tokenKeyname: "eth",
     });
   };
 
@@ -92,7 +102,12 @@ export default function Home() {
       <main className={styles.main}>
         <ConnectButton />
         {metaport && (
-          <button onClick={handleTranser}>Transfer to Calypso</button>
+          <>
+            <button onClick={handleTranserToEuropa}>Transfer to Europa</button>
+            <button onClick={handleTranserToCalypso}>
+              Transfer to Calypso
+            </button>
+          </>
         )}
         <div id="metaport"></div>
       </main>
