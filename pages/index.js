@@ -73,7 +73,7 @@ export default function Home() {
 
   const handleTranserToCalypso = () => {
     metaport.transfer({
-      amount: "1000000000000",
+      amount: "0.001",
       chains: ["staging-legal-crazy-castor", "staging-utter-unripe-menkar"],
       tokenType: "erc20",
       lockValue: false,
@@ -83,7 +83,7 @@ export default function Home() {
 
   const handleTranserToEuropa = () => {
     metaport.transfer({
-      amount: "1000000000000",
+      amount: "0.001",
       chains: ["mainnet", "staging-legal-crazy-castor"],
       tokenType: "eth",
       lockValue: false,
